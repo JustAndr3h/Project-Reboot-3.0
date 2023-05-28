@@ -316,6 +316,11 @@ bool AFortGameModeAthena::Athena_ReadyToStartMatchHook(AFortGameModeAthena* Game
 
 				else if (Fortnite_Season == 10)
 				{
+					if (Fortnite_Version == 10.40)
+					{
+						auto Rocket = FindObject<AActor>("/Game/Athena/Maps/Athena_POI_Foundations.Athena_POI_Foundations.PersistentLevel.LF_Athena_POI_5x9_VLB_Rkt");
+						ShowFoundation(Rocket);
+					}
 					if (Fortnite_Version >= 10.20)
 					{
 						auto Island = FindObject<AActor>("/Game/Athena/Maps/Athena_POI_Foundations.Athena_POI_Foundations.PersistentLevel.LF_Athena_StreamingTest16");
